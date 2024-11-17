@@ -1,0 +1,15 @@
+
+spring:
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: localhost:9876
+      bindings:
+        input:
+          destination: my-topic
+          group: my-group
+        output:
+          destination: my-topic
+server:
+  port: 0

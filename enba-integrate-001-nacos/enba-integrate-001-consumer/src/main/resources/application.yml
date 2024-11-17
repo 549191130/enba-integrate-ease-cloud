@@ -1,0 +1,19 @@
+feign:
+  sentinel:
+    enabled: true
+
+server:
+  port: 18083
+spring:
+  application:
+    name: service-consumer
+  cloud:
+    loadbalancer:
+      nacos:
+        enabled: true
+    nacos:
+      discovery:
+        fail-fast: true
+        server-addr: 127.0.0.1:8848
+      password:
+      username:

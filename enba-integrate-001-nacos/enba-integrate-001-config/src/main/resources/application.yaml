@@ -1,0 +1,21 @@
+server:
+  port: 18084
+
+spring:
+  application:
+    name: nacos-config-example
+  cloud:
+    nacos:
+      config:
+        serverAddr: 127.0.0.1:8848
+        username:
+        password:
+        extendKey: value
+  config:
+    import:
+      - nacos:nacos-config-example.properties?refresh=true
+
+logging:
+  level:
+    com.alibaba.cloud.nacos.configdata: debug
+
